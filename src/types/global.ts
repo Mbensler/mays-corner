@@ -28,12 +28,12 @@ export type ProductCollectionWithPreviews = Omit<
   ProductCollection,
   "products"
 > & {
-  products: ProductPreviewType[]
+  products: Array<ProductPreviewType>
 }
 
 export type InfiniteProductPage = {
   response: {
-    products: PricedProduct[]
+    products: Array<PricedProduct>
     count: number
   }
 }
@@ -53,6 +53,6 @@ export type ProductCategoryWithChildren = Omit<
   ProductCategory,
   "category_children"
 > & {
-  category_children: ProductCategory[]
+  category_children: Array<ProductCategory>
   category_parent?: ProductCategory
 }
